@@ -230,7 +230,7 @@ def mount(_params, _session, socket) do
 end
 ```
 
-You can see the problem here, right? Yes, `mount/3` is called twice: once when the initial html is rendered a
+You can see the problem here, right? Yes, `mount/3` is called twice: once when the initial html is rendered
 and again when the socket connects, so an extra `Debouncer` is started.
 
 This would be a waste of cpu cycles, but
